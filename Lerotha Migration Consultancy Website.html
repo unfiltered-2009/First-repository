@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lerotha Migration Consultancy (Pty) Ltd | Immigration Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a3b70',
+                            900: '#0f2b5c',
+                            950: '#081a3b',
+                        },
+                        emerald: {
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f2b5c 0%, #1a3b70 60%, #0d4232 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+        }
+        .modal-blur {
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Top Announcement & Contact Bar -->
+    <div class="bg-navy-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 flex-wrap justify-center sm:justify-start gap-y-1">
+                <a href="tel:+26658088322" class="flex items-center hover:text-emerald-400 transition-colors">
+                    <i class="fa-solid font-bold fa-phone text-emerald-500 mr-2"></i>(+266) 5808 8322
+                </a>
+                <a href="tel:+26665000000" class="flex items-center hover:text-emerald-400 transition-colors">
+                    <i class="fa-solid fa-mobile-screen-button text-emerald-500 mr-2"></i>(+266) 6500 0000
+                </a>
+                <span class="hidden md:flex items-center text-slate-400">
+                    <i class="fa-solid fa-location-dot text-emerald-500 mr-2"></i>Lower Thamae, Maseru, Lesotho
+                </span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="mailto:www.klerotha.com@gmail.com" class="hover:text-emerald-400 transition-colors flex items-center">
+                    <i class="fa-solid fa-envelope text-emerald-500 mr-1.5"></i>www.klerotha.com@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo & Title -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full bg-navy-900 border-2 border-emerald-500 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-globe text-emerald-400"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1">
+                            <span class="text-xl font-black text-navy-900 tracking-tight">LEROTHA</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">LMC</span>
+                        </div>
+                        <p class="text-[10px] font-semibold text-slate-500 tracking-wider uppercase">Migration Consultancy (Pty) Ltd</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-navy-900 transition-colors py-1 border-b-2 border-transparent hover:border-emerald-500">Home</a>
+                    <a href="#eligibility" class="hover:text-navy-900 transition-colors py-1 border-b-2 border-transparent hover:border-emerald-500">Eligibility Assessment</a>
+                    <a href="#services" class="hover:text-navy-900 transition-colors py-1 border-b-2 border-transparent hover:border-emerald-500">Our Services</a>
+                    <a href="#why-us" class="hover:text-navy-900 transition-colors py-1 border-b-2 border-transparent hover:border-emerald-500">Why Choose Us</a>
+                    <a href="#contact" class="hover:text-navy-900 transition-colors py-1 border-b-2 border-transparent hover:border-emerald-500">Contact Us</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="#booking" class="bg-navy-900 hover:bg-navy-800 text-white font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center">
+                        <i class="fa-solid fa-calendar-check mr-2 text-emerald-400"></i> Book Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" type="button" class="lg:hidden text-slate-700 hover:text-navy-900 p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-100">Home</a>
+            <a href="#eligibility" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-100">Eligibility Assessment</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-100">Our Services</a>
+            <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-100">Why Choose Us</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-semibold text-slate-700 hover:bg-slate-100">Contact Us</a>
+            <div class="pt-2">
+                <a href="#booking" class="mobile-nav-link w-full text-center block bg-navy-900 text-white font-bold py-3 rounded-xl shadow">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-gradient text-white relative overflow-hidden py-16 lg:py-24">
+        <!-- Decorative background elements -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider backdrop-blur-sm">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Official Lesotho Immigration Consultancy</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Your Trusted Partner in <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-300">Immigration Solutions.</span>
+                    </h1>
+
+                    <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                        We make your immigration journey <strong class="text-white font-semibold">simple</strong>, <strong class="text-white font-semibold">professional</strong>, and <strong class="text-white font-semibold">stress-free</strong>. We provide expert guidance and reliable support for all your immigration and visa needs.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#eligibility" class="accent-gradient hover:opacity-95 text-white font-bold px-7 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center text-base transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-magnifying-glass-location mr-2.5 text-lg"></i> Check Your Visa Eligibility
+                        </a>
+                        <a href="#services" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-7 py-4 rounded-xl border border-white/20 backdrop-blur-md transition-all flex items-center justify-center text-base">
+                            <i class="fa-solid fa-list-check mr-2.5 text-emerald-400"></i> Explore Our Services
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center sm:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">100%</div>
+                            <div class="text-xs text-slate-300">Dedicated Support</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">12+</div>
+                            <div class="text-xs text-slate-300">Specialized Services</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Maseru</div>
+                            <div class="text-xs text-slate-300">Lesotho HQ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Right Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card text-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/40 relative">
+                        <!-- Passport badge -->
+                        <div class="absolute -top-5 -right-5 bg-emerald-600 text-white p-3 rounded-2xl shadow-lg flex items-center justify-center">
+                            <i class="fa-solid fa-passport text-3xl"></i>
+                        </div>
+
+                        <h3 class="text-xl font-extrabold text-navy-900 mb-2">Need Urgent Immigration Help?</h3>
+                        <p class="text-slate-600 text-sm mb-6">Connect with our licensed consultancy team directly for swift assistance.</p>
+
+                        <!-- Quick Checklist -->
+                        <ul class="space-y-3 text-sm font-medium mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-600 mr-3 text-base"></i> Work & Business Permits
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-600 mr-3 text-base"></i> Permanent & Residence Permits
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-600 mr-3 text-base"></i> Immigration Appeals & Documents
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-circle-check text-emerald-600 mr-3 text-base"></i> Official Sponsorship Letters
+                            </li>
+                        </ul>
+
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-6">
+                            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-1">Direct Helpline</div>
+                            <a href="tel:+26658088322" class="text-lg font-bold text-navy-900 hover:text-emerald-600 flex items-center">
+                                <i class="fa-solid fa-phone-volume text-emerald-600 mr-2"></i> (+266) 5808 8322
+                            </a>
+                        </div>
+
+                        <a href="#booking" class="w-full text-center block bg-navy-900 hover:bg-navy-800 text-white font-bold py-3.5 rounded-xl shadow transition">
+                            Request Immediate Advice
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ELIGIBILITY CHECKER -->
+    <section id="eligibility" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <span class="text-emerald-600 font-bold uppercase text-xs tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    Interactive Tool
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-navy-900 mt-2">Visa & Permit Eligibility Checker</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">Answer 3 quick questions to discover the right permit pathway for your journey.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 border border-slate-200" id="eligibility-container">
+                <!-- Progress bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between text-xs font-semibold text-slate-500 mb-2">
+                        <span id="step-indicator">Step 1 of 3: Primary Purpose</span>
+                        <span id="step-percentage">33%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2.5">
+                        <div id="progress-bar" class="bg-emerald-600 h-2.5 rounded-full transition-all duration-300" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Purpose -->
+                <div id="step-1" class="step-content">
+                    <h3 class="text-lg font-bold text-navy-900 mb-4">What is your primary reason for travel or stay?</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button type="button" onclick="selectPurpose('work', 'Work / Employment')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-briefcase text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Work & Employment</div>
+                                <div class="text-xs text-slate-500">Job placement, employer compliance, work permit</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectPurpose('business', 'Business & Investment')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-chart-line text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Business & Investment</div>
+                                <div class="text-xs text-slate-500">Entrepreneurs, investors, company owners</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectPurpose('study', 'Education & Study')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-graduation-cap text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Study / Education</div>
+                                <div class="text-xs text-slate-500">Students attending local or international institutions</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectPurpose('family', 'Family Reunification')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-people-roof text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Family Reunification</div>
+                                <div class="text-xs text-slate-500">Joining spouse, parents, or dependents</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectPurpose('permanent', 'Permanent Residence')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-house-user text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Permanent Settlement</div>
+                                <div class="text-xs text-slate-500">Long-term residence and temporary status extensions</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectPurpose('appeal', 'Refusal Appeal or Document Help')" class="purpose-btn p-4 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-start space-x-3">
+                            <div class="p-2 bg-navy-50 text-navy-900 rounded-lg"><i class="fa-solid fa-scale-balanced text-lg"></i></div>
+                            <div>
+                                <div class="font-bold text-slate-800">Appeals & Document Help</div>
+                                <div class="text-xs text-slate-500">Fix rejected visas, affidavits, sponsorship letters</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Destination / Scope -->
+                <div id="step-2" class="step-content hidden">
+                    <h3 class="text-lg font-bold text-navy-900 mb-4">Where is your application based?</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button type="button" onclick="selectScope('Lesotho', 'Into Lesotho')" class="scope-btn p-5 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-center space-x-4">
+                            <i class="fa-solid fa-plane-arrival text-2xl text-emerald-600"></i>
+                            <div>
+                                <div class="font-bold text-slate-800">Immigrating to Lesotho</div>
+                                <div class="text-xs text-slate-500">Foreign nationals entering Lesotho for work, business, study</div>
+                            </div>
+                        </button>
+                        <button type="button" onclick="selectScope('Abroad', 'Outbound / International')" class="scope-btn p-5 border-2 border-slate-200 rounded-xl hover:border-emerald-500 hover:bg-emerald-50/50 text-left transition flex items-center space-x-4">
+                            <i class="fa-solid fa-plane-departure text-2xl text-navy-800"></i>
+                            <div>
+                                <div class="font-bold text-slate-800">Travelling Abroad from Lesotho</div>
+                                <div class="text-xs text-slate-500">Lesotho citizens needing visas, sponsorship, or affidavits</div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="mt-6 flex justify-start">
+                        <button type="button" onclick="goToStep(1)" class="text-sm font-semibold text-slate-500 hover:text-navy-900">
+                            <i class="fa-solid fa-arrow-left mr-1"></i> Back to Step 1
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Document Status -->
+                <div id="step-3" class="step-content hidden">
+                    <h3 class="text-lg font-bold text-navy-900 mb-4">Current Document Status</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-slate-50">
+                            <input type="checkbox" id="doc-passport" class="w-5 h-5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                            <span class="ml-3 text-sm font-medium text-slate-700">Valid Passport available</span>
+                        </label>
+                        <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-slate-50">
+                            <input type="checkbox" id="doc-qualifications" class="w-5 h-5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                            <span class="ml-3 text-sm font-medium text-slate-700">Educational / Business credentials ready</span>
+                        </label>
+                        <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-slate-50">
+                            <input type="checkbox" id="doc-financials" class="w-5 h-5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                            <span class="ml-3 text-sm font-medium text-slate-700">Financial proof or bank statement ready</span>
+                        </label>
+                    </div>
+                    <div class="mt-8 flex justify-between items-center">
+                        <button type="button" onclick="goToStep(2)" class="text-sm font-semibold text-slate-500 hover:text-navy-900">
+                            <i class="fa-solid fa-arrow-left mr-1"></i> Back
+                        </button>
+                        <button type="button" onclick="calculateEligibility()" class="accent-gradient text-white font-bold px-6 py-3 rounded-xl shadow hover:opacity-90 transition">
+                            Generate Recommendation <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Result View -->
+                <div id="step-result" class="step-content hidden text-center py-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-navy-900 mb-2">Recommended Permit Pathway</h3>
+                    <div id="recommendation-badge" class="inline-block bg-navy-900 text-white font-bold px-4 py-1.5 rounded-full text-sm mb-4">
+                        Work Permit & Business Compliance
+                    </div>
+                    <p id="recommendation-text" class="text-slate-600 text-sm max-w-xl mx-auto mb-6">
+                        Based on your selections, Lerotha Migration Consultancy can handle your official submission, document legalizations, and employer compliance end-to-end.
+                    </p>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 max-w-md mx-auto text-left text-xs text-slate-600 space-y-2 mb-6">
+                        <div class="font-bold text-slate-800 text-sm mb-1"><i class="fa-solid fa-circle-info text-emerald-600 mr-1"></i> What happens next:</div>
+                        <div>1. Schedule a 1-on-1 assessment with our Maseru office.</div>
+                        <div>2. We perform document verification and draft required affidavits.</div>
+                        <div>3. We submit and follow up directly with immigration authorities.</div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-3">
+                        <button type="button" onclick="prefillBookingFromAssessment()" class="accent-gradient text-white font-bold px-6 py-3 rounded-xl shadow hover:opacity-95">
+                            Book This Consultation Now
+                        </button>
+                        <button type="button" onclick="resetEligibility()" class="bg-slate-200 text-slate-700 font-semibold px-5 py-3 rounded-xl hover:bg-slate-300">
+                            Start Over
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPREHENSIVE SERVICES SECTION -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-emerald-600 font-bold uppercase text-xs tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    What We Do
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Our Specialized Immigration Services</h2>
+                <p class="text-slate-600 text-base mt-2">Professional guidance for individuals, businesses, students, and families navigating legal migration processes.</p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="service-filters">
+                <button type="button" onclick="filterServices('all')" class="filter-btn active bg-navy-900 text-white font-semibold px-5 py-2 rounded-full text-sm transition">All Services</button>
+                <button type="button" onclick="filterServices('visas')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-sm transition">Visas & Permits</button>
+                <button type="button" onclick="filterServices('legal')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-sm transition">Legal & Documents</button>
+                <button type="button" onclick="filterServices('consultation')" class="filter-btn bg-slate-100 text-slate-700 hover:bg-slate-200 font-semibold px-5 py-2 rounded-full text-sm transition">Consultation & Appeals</button>
+            </div>
+
+            <!-- Services Grid (12 Services from Flyer) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-grid">
+                
+                <!-- Service 1 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Visa Applications</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Assistance with visitor, business, student, work, and transit visa applications with maximum accuracy.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(0)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Business Permits & Investor Visas</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Dedicated legal support for entrepreneurs, foreign investors, and international business owners setting up in Lesotho.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(1)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Relative & Family Permits</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">We assist with applications for relatives, spouses, and dependents to legally join and reunite with their families.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(2)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card legal bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Invitation & Sponsorship Letters</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Professional drafting of legal invitation and financial sponsorship letters compliant with embassy formats.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(3)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Work Permit Applications</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Expert assistance with new work permits, timely renewals, quota compliance, and employer regulations.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(4)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card legal bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-pen"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Affidavits & Supporting Documents</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Drafting official affidavits, sworn declarations, and statutory documents needed for immigration files.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(5)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Study Permit Applications</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Guidance and end-to-end permit processing for students wishing to study at local institutions or abroad.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(6)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card consultation bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Immigration Appeals</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Representation and structured legal appeal submissions for refused, rejected, or delayed applications.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(7)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Permanent & Temporary Residence</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Complete guidance on obtaining both short-term temporary stay permits and long-term permanent residence status.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(8)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 10 -->
+                <div class="service-card visas bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Permit Renewals & Extensions</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Proactive, timely assistance with extensions to prevent unlawful stays, fines, or status lapses.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(9)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 11 -->
+                <div class="service-card legal bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Document Preparation & Verification</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Professional document audit, translation coordination, and verification of all required immigration papers.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(10)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Service 12 -->
+                <div class="service-card consultation bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-comments text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-navy-900 mb-2">Immigration Consultation & Advice</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Personalized one-on-one consultation, policy navigation, and eligibility risk assessment.</p>
+                    </div>
+                    <button type="button" onclick="openServiceModal(11)" class="text-emerald-600 font-bold text-sm flex items-center hover:text-emerald-700 pt-2 border-t border-slate-200/60">
+                        View Details & Apply <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US / VALUE PILLARS -->
+    <section id="why-us" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-400 font-bold uppercase text-xs tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/30">
+                    Why Lerotha Migration
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3">Why Trust Us With Your Journey?</h2>
+                <p class="text-slate-400 text-sm sm:text-base mt-2">Built on integrity, speed, and deep understanding of national and international migration procedures.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Professional Service</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Handled by experienced immigration experts with in-depth regulatory know-how.</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Trusted & Reliable</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Your satisfaction and successful outcomes are our highest corporate priority.</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Efficient & Timely</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">We value your time, strictly respecting critical submission deadlines and timelines.</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 hover:border-emerald-500 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mb-5">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Confidential & Secure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Your sensitive documents and personal information are protected with total discretion.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING & CONTACT FORM SECTION -->
+    <section id="booking" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Side Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-emerald-600 font-bold uppercase text-xs tracking-wider bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                        Get In Touch
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 leading-tight">Let Us Help You Make Your Dreams A Reality.</h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Schedule a consultation or send an inquiry to our expert team. We are conveniently located in Lower Thamae, Maseru, Lesotho.
+                    </p>
+
+                    <!-- Contact details list -->
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-900 text-emerald-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-navy-900 text-sm">Office Location</div>
+                                <div class="text-slate-600 text-sm">Lower Thamae, Maseru, Lesotho</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-900 text-emerald-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-navy-900 text-sm">Phone Numbers</div>
+                                <div class="text-slate-600 text-sm">(+266) 5808 8322</div>
+                                <div class="text-slate-600 text-sm">(+266) 6500 0000</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-900 text-emerald-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-navy-900 text-sm">Email Address</div>
+                                <div class="text-slate-600 text-sm">www.klerotha.com@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-900 text-emerald-400 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-navy-900 text-sm">Official Website</div>
+                                <div class="text-slate-600 text-sm">www.lerothamigration.co.ls</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side Interactive Booking Form -->
+                <div class="lg:col-span-7" id="contact">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 border border-slate-200">
+                        <h3 class="text-2xl font-extrabold text-navy-900 mb-2">Book Your Consultation</h3>
+                        <p class="text-slate-500 text-sm mb-6">Fill in the form below and an advisor will contact you shortly.</p>
+
+                        <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" required id="form-name" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" required id="form-phone" placeholder="+266 5000 0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Service Required *</label>
+                                    <select id="form-service" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none bg-white">
+                                        <option value="">-- Select Service --</option>
+                                        <option value="Visa Applications">Visa Applications</option>
+                                        <option value="Business Permits & Investor Visas">Business Permits & Investor Visas</option>
+                                        <option value="Relative & Family Permits">Relative & Family Permits</option>
+                                        <option value="Invitation & Sponsorship Letters">Invitation & Sponsorship Letters</option>
+                                        <option value="Work Permit Applications">Work Permit Applications</option>
+                                        <option value="Affidavits & Documents">Affidavits & Supporting Documents</option>
+                                        <option value="Study Permit Applications">Study Permit Applications</option>
+                                        <option value="Immigration Appeals">Immigration Appeals</option>
+                                        <option value="Permanent & Residence Permits">Permanent & Temporary Residence</option>
+                                        <option value="Permit Renewals">Permit Renewals & Extensions</option>
+                                        <option value="Document Verification">Document Preparation & Verification</option>
+                                        <option value="General Consultation">General Consultation & Advice</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Preferred Date</label>
+                                    <input type="date" id="form-date" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Preferred Consultation Type</label>
+                                    <select id="form-type" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none bg-white">
+                                        <option value="In-Person (Lower Thamae Office)">In-Person (Lower Thamae Office)</option>
+                                        <option value="Phone Call Consultation">Phone Call Consultation</option>
+                                        <option value="WhatsApp / Virtual Meeting">WhatsApp / Virtual Meeting</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Brief Description of Your Needs</label>
+                                <textarea id="form-message" rows="3" placeholder="Tell us about your passport status, target country, or specific permit concerns..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm outline-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full accent-gradient text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-95 transition flex items-center justify-center text-base">
+                                <i class="fa-solid fa-paper-plane mr-2"></i> Submit Consultation Booking
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE DETAILS MODAL -->
+    <div id="service-modal" class="fixed inset-0 bg-slate-900/70 z-50 hidden flex items-center justify-center p-4 modal-blur">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeServiceModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center space-x-3 mb-4">
+                <div id="modal-icon" class="w-12 h-12 bg-navy-900 text-emerald-400 rounded-xl flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-passport"></i>
+                </div>
+                <div>
+                    <h3 id="modal-title" class="text-xl font-extrabold text-navy-900">Service Title</h3>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Lerotha Official Service</span>
+                </div>
+            </div>
+
+            <p id="modal-description" class="text-slate-600 text-sm leading-relaxed mb-6">Detailed description goes here...</p>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6">
+                <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wider mb-2"><i class="fa-solid fa-list-check text-emerald-600 mr-1"></i> Common Documents Needed:</h4>
+                <ul id="modal-requirements" class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                    <li>Valid Passport</li>
+                    <li>Official Identification</li>
+                </ul>
+            </div>
+
+            <div class="flex gap-3">
+                <button type="button" onclick="bookFromModal()" class="w-full accent-gradient text-white font-bold py-3 rounded-xl shadow hover:opacity-95 text-sm">
+                    Inquire For This Service
+                </button>
+                <button type="button" onclick="closeServiceModal()" class="px-5 py-3 border border-slate-300 rounded-xl font-semibold text-slate-700 text-sm hover:bg-slate-50">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING CONFIRMATION MODAL -->
+    <div id="confirmation-modal" class="fixed inset-0 bg-slate-900/70 z-50 hidden flex items-center justify-center p-4 modal-blur">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl text-center">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-navy-900 mb-1">Booking Confirmed!</h3>
+            <p class="text-slate-500 text-sm mb-4">Thank you for contacting Lerotha Migration Consultancy.</p>
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 text-left text-xs space-y-2">
+                <div class="flex justify-between border-b pb-1">
+                    <span class="text-slate-500">Reference Code:</span>
+                    <strong id="confirm-ref" class="text-emerald-700 font-mono">LMC-00000</strong>
+                </div>
+                <div class="flex justify-between border-b pb-1">
+                    <span class="text-slate-500">Name:</span>
+                    <span id="confirm-name" class="font-semibold text-slate-800">---</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-500">Service:</span>
+                    <span id="confirm-service" class="font-semibold text-slate-800">---</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-500 mb-6">Our team will call or message your phone number shortly to finalize time and document requirements.</p>
+
+            <button type="button" onclick="closeConfirmationModal()" class="w-full bg-navy-900 text-white font-bold py-3 rounded-xl shadow hover:bg-navy-800">
+                Done
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white text-sm font-bold">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <span class="text-lg font-black text-white">LEROTHA</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Lerotha Migration Consultancy (Pty) Ltd. Your Trusted Partner in Immigration Solutions. Professional, reliable, and swift legal guidance.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="https://facebook.com" target="_blank" class="w-8 h-8 bg-slate-800 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="mailto:www.klerotha.com@gmail.com" class="w-8 h-8 bg-slate-800 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition">
+                            <i class="fa-solid fa-envelope text-sm"></i>
+                        </a>
+                        <a href="tel:+26658088322" class="w-8 h-8 bg-slate-800 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition">
+                            <i class="fa-solid fa-phone text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-emerald-400 transition">Home Page</a></li>
+                        <li><a href="#eligibility" class="hover:text-emerald-400 transition">Visa Eligibility Checker</a></li>
+                        <li><a href="#services" class="hover:text-emerald-400 transition">All 12 Services</a></li>
+                        <li><a href="#why-us" class="hover:text-emerald-400 transition">Why Choose Us</a></li>
+                        <li><a href="#booking" class="hover:text-emerald-400 transition">Book Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Core Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>Work & Business Permits</li>
+                        <li>Relative & Family Permits</li>
+                        <li>Study Permits (Local & Abroad)</li>
+                        <li>Affidavits & Sponsorship Letters</li>
+                        <li>Immigration Appeals & Renewals</li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4 border-b border-slate-800 pb-2">Contact Details</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-emerald-500 mr-2.5 mt-0.5"></i>
+                            <span>Lower Thamae, Maseru, Lesotho</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-emerald-500 mr-2.5"></i>
+                            <span>(+266) 5808 8322 / 6500 0000</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope text-emerald-500 mr-2.5"></i>
+                            <span>www.klerotha.com@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-globe text-emerald-500 mr-2.5"></i>
+                            <span>www.lerothamigration.co.ls</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; Lerotha Migration Consultancy (Pty) Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <span>Your Trusted Partner in Immigration Solutions.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data structure for the 12 Services
+        const servicesData = [
+            {
+                title: "Visa Applications",
+                icon: "fa-passport",
+                description: "Full end-to-end support for foreign and local visa processing including visitor, business, student, work, and transit applications with thorough eligibility documentation.",
+                requirements: ["Valid Passport (at least 6 months remaining)", "Completed visa application forms", "Passport sized photos", "Proof of funds / Travel itinerary"]
+            },
+            {
+                title: "Business Permits & Investor Visas",
+                icon: "fa-briefcase",
+                description: "Tailored immigration legal services for foreign business founders, investors, and company directors establishing operations in Lesotho.",
+                requirements: ["Company Registration Documents", "Proof of Investment Capital", "Tax Clearances", "Business Plan & Director Passports"]
+            },
+            {
+                title: "Relative & Family Permits",
+                icon: "fa-users",
+                description: "Support for foreign nationals seeking to reunite with family members, legal spouses, parents, or minor dependents living in Lesotho or abroad.",
+                requirements: ["Marriage / Birth Certificates", "Proof of Kinship", "Sponsor's legal residence permit/ID", "Financial maintenance proof"]
+            },
+            {
+                title: "Invitation & Sponsorship Letters",
+                icon: "fa-envelope-open-text",
+                description: "Official drafting of legally legally sound invitation letters and affidavit sponsorship documents accepted by embassies and home affairs.",
+                requirements: ["Host ID / Passport copy", "Proof of physical address in Lesotho", "Guest passport details", "Proof of accommodation"]
+            },
+            {
+                title: "Work Permit Applications",
+                icon: "fa-id-card",
+                description: "Comprehensive processing for new expatriate work permits, renewals, quota extensions, and employer immigration compliance.",
+                requirements: ["Employment Contract / Offer Letter", "Educational qualifications", "Police Clearance Certificate", "Employer motivation & company docs"]
+            },
+            {
+                title: "Affidavits & Supporting Documents",
+                icon: "fa-file-pen",
+                description: "Sworn legal affidavits, statutory declarations, document attestations, and formal supporting statements for immigration submissions.",
+                requirements: ["Identity document / Passport", "Detailed facts of declaration", "Supporting evidence if applicable"]
+            },
+            {
+                title: "Study Permit Applications",
+                icon: "fa-graduation-cap",
+                description: "Guidance for foreign students seeking to study in Lesotho or local students applying for foreign study visas.",
+                requirements: ["Acceptance letter from educational institution", "Proof of tuition & living funds", "Medical clearance", "Guardian consent (if minor)"]
+            },
+            {
+                title: "Immigration Appeals",
+                icon: "fa-gavel",
+                description: "Formal legal review and appeal submissions for visa refusals, entry rejections, or immigration order queries.",
+                requirements: ["Refusal notice letter", "Original submission copy", "Additional supporting evidence / Context statement"]
+            },
+            {
+                title: "Permanent & Temporary Residence Permits",
+                icon: "fa-house-chimney",
+                description: "Long-term residence solutions for long-term residents, retirees, investors, and qualified workers.",
+                requirements: ["Continuous legal stay records", "Clean criminal record", "Financial self-sufficiency proof", "Medical checks"]
+            },
+            {
+                title: "Permit Renewals & Extensions",
+                icon: "fa-calendar-check",
+                description: "Timely processing for existing permit extensions before expiration to maintain legal status continuously.",
+                requirements: ["Current permit copy", "Valid passport", "Reason for extension", "Updated financial/employment proof"]
+            },
+            {
+                title: "Document Preparation & Verification",
+                icon: "fa-file-circle-check",
+                description: "Pre-submission audit, legalization check, translation review, and document verification to guarantee high approval odds.",
+                requirements: ["All unverified original documents", "Translation copies (if non-English)", "Identification"]
+            },
+            {
+                title: "Immigration Consultation & Advice",
+                icon: "fa-comments",
+                description: "Private one-on-one session with senior consultants to evaluate legal options, assess risk factors, and construct personalized pathways.",
+                requirements: ["Current passport details", "Brief summary of legal intent or past immigration history"]
+            }
+        ];
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Eligibility Checker State & Functions
+        let assessmentData = {
+            purpose: '',
+            purposeLabel: '',
+            scope: '',
+            scopeLabel: '',
+            docs: []
+        };
+
+        function selectPurpose(key, label) {
+            assessmentData.purpose = key;
+            assessmentData.purposeLabel = label;
+            goToStep(2);
+        }
+
+        function selectScope(key, label) {
+            assessmentData.scope = key;
+            assessmentData.scopeLabel = label;
+            goToStep(3);
+        }
+
+        function goToStep(stepNum) {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+            const target = document.getElementById(`step-${stepNum}`);
+            if (target) target.classList.remove('hidden');
+
+            const indicator = document.getElementById('step-indicator');
+            const percentage = document.getElementById('step-percentage');
+            const bar = document.getElementById('progress-bar');
+
+            if (stepNum === 1) {
+                indicator.textContent = "Step 1 of 3: Primary Purpose";
+                percentage.textContent = "33%";
+                bar.style.width = "33%";
+            } else if (stepNum === 2) {
+                indicator.textContent = "Step 2 of 3: Destination Context";
+                percentage.textContent = "66%";
+                bar.style.width = "66%";
+            } else if (stepNum === 3) {
+                indicator.textContent = "Step 3 of 3: Document Readiness";
+                percentage.textContent = "90%";
+                bar.style.width = "90%";
+            }
+        }
+
+        function calculateEligibility() {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step-result').classList.remove('hidden');
+
+            document.getElementById('step-indicator').textContent = "Assessment Complete";
+            document.getElementById('step-percentage').textContent = "100%";
+            document.getElementById('progress-bar').style.width = "100%";
+
+            const badge = document.getElementById('recommendation-badge');
+            const text = document.getElementById('recommendation-text');
+
+            const p = assessmentData.purpose;
+            const scope = assessmentData.scopeLabel;
+
+            if (p === 'work') {
+                badge.textContent = `Work Permit & Compliance (${scope})`;
+                text.textContent = `You qualify for our Work Permit Application & Employer Compliance pathway. We handle quota motivation, affidavit drafting, and direct liaison with immigration authorities.`;
+            } else if (p === 'business') {
+                badge.textContent = `Business Permit & Investor Visa (${scope})`;
+                text.textContent = `We recommend our Business Permits & Investor Visa package. We assist with foreign investment documentation, business registration legalities, and residence authorization.`;
+            } else if (p === 'study') {
+                badge.textContent = `Study Permit Application (${scope})`;
+                text.textContent = `Your path is the Study Permit Application pathway. Lerotha Consultancy will verify student acceptance papers and submit all requisite study authorizations.`;
+            } else if (p === 'family') {
+                badge.textContent = `Relative & Family Permit (${scope})`;
+                text.textContent = `Your ideal route is Family Reunification. We draft supporting invitation/sponsorship letters and handle family residence permit filings.`;
+            } else if (p === 'permanent') {
+                badge.textContent = `Permanent / Temporary Residence (${scope})`;
+                text.textContent = `We recommend a direct Residence Consultation to audit your years of continuous stay, financial proof, and transition to long-term permit status.`;
+            } else {
+                badge.textContent = `Immigration Appeals & Document Support (${scope})`;
+                text.textContent = `We recommend an urgent document audit or appeal filing. Our legal team will review refusal reasons and draft sworn affidavits.`;
+            }
+        }
+
+        function resetEligibility() {
+            assessmentData = { purpose: '', purposeLabel: '', scope: '', scopeLabel: '', docs: [] };
+            goToStep(1);
+        }
+
+        function prefillBookingFromAssessment() {
+            const serviceSelect = document.getElementById('form-service');
+            const p = assessmentData.purpose;
+            
+            if (p === 'work') serviceSelect.value = 'Work Permit Applications';
+            else if (p === 'business') serviceSelect.value = 'Business Permits & Investor Visas';
+            else if (p === 'study') serviceSelect.value = 'Study Permit Applications';
+            else if (p === 'family') serviceSelect.value = 'Relative & Family Permits';
+            else if (p === 'permanent') serviceSelect.value = 'Permanent & Residence Permits';
+            else serviceSelect.value = 'Immigration Appeals';
+
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Service Filter Tabs Logic
+        function filterServices(category) {
+            const buttons = document.querySelectorAll('#service-filters button');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy-900', 'text-white', 'active');
+                btn.classList.add('bg-slate-100', 'text-slate-700');
+            });
+
+            event.target.classList.remove('bg-slate-100', 'text-slate-700');
+            event.target.classList.add('bg-navy-900', 'text-white', 'active');
+
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Modal Functions
+        let activeModalIndex = 0;
+
+        function openServiceModal(index) {
+            activeModalIndex = index;
+            const data = servicesData[index];
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-description').textContent = data.description;
+            document.getElementById('modal-icon').innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+
+            const reqList = document.getElementById('modal-requirements');
+            reqList.innerHTML = '';
+            data.requirements.forEach(req => {
+                const li = document.createElement('li');
+                li.textContent = req;
+                reqList.appendChild(li);
+            });
+
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+
+        function bookFromModal() {
+            const data = servicesData[activeModalIndex];
+            closeServiceModal();
+            const serviceSelect = document.getElementById('form-service');
+            
+            // Match select options
+            for (let option of serviceSelect.options) {
+                if (option.value.toLowerCase().includes(data.title.toLowerCase().split(' ')[0])) {
+                    serviceSelect.value = option.value;
+                    break;
+                }
+            }
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submission Logic
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('form-name').value;
+            const service = document.getElementById('form-service').value;
+
+            // Generate Random Booking Reference Code
+            const refCode = 'LMC-' + Math.floor(10000 + Math.random() * 90000);
+
+            document.getElementById('confirm-ref').textContent = refCode;
+            document.getElementById('confirm-name').textContent = name;
+            document.getElementById('confirm-service').textContent = service || 'Consultation';
+
+            document.getElementById('confirmation-modal').classList.remove('hidden');
+            document.getElementById('consultation-form').reset();
+        }
+
+        function closeConfirmationModal() {
+            document.getElementById('confirmation-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
